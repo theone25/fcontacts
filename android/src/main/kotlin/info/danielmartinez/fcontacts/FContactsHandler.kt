@@ -149,7 +149,7 @@ class FContactsHandler (
         }
         emails.close()
         model.emails = listEmails
-
+        return model
     }
 
     private fun contains( model: FContact, query: String? = null ) : Boolean {
