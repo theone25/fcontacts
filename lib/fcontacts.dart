@@ -52,6 +52,7 @@ class FContact {
     phoneNumbers = (map["phoneNumbers"] as Iterable)
         ?.map((item) => FContactValueLabeled.fromMap(item))
         ?.toList();
+  }
 }
 
 class FContactValueLabeled {
