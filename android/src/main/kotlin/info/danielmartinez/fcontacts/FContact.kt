@@ -7,7 +7,7 @@ class FContact (
     var thumbnailData : ByteArray? = null,
     var imageDataAvailable : Boolean = false,
     var emails : List<FContactValueLabeled>? = null,
-    var phoneNumbers : List<FContactValueLabeled>? = null,
+    var phoneNumbers : List<FContactValueLabeled>? = null
 ) : Comparable<FContact> {
 
     override fun compareTo( other: FContact ): Int {
