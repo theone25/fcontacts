@@ -24,6 +24,7 @@ class FContactsPlugin (
     when {
       call.method == "getPlatformVersion" -> result.success("Android ${android.os.Build.VERSION.RELEASE}")
       call.method == "list" -> list( result, call.argument("query") )
+      call.method == "myfunc" -> myfunc(result)
       else -> result.notImplemented()
     }
   }
@@ -33,5 +34,10 @@ class FContactsPlugin (
       result.success( items )
     }
   }
+    
+    private fun myfunc( result: Result) {
+      result.success( "this is my string, i called it" )
+  }
+    
 
 }
