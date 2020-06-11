@@ -11,12 +11,6 @@ class FContacts {
     return version;
   }
 
-  
-  static Future<String> myfunc() async {
-    var all = await _channel.invokeMethod("myfunc");
-    return all;
-  }
-  
   static Future<List<FContact>> all() async {
     Iterable all = await _channel.invokeMethod("list");
     var mapped = all.map((item) => FContact.fromMap(item));
